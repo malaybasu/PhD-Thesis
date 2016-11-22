@@ -1,0 +1,1276 @@
+\chapter{Materials and Methods}
+%\minitoc
+
+\section{Chemicals}
+
+Agarose, ethidium bromide, X-gal, IPTG, SDS, BSA, acrylamide,
+bis-acry\-la\-mide, $\betaup$-mercapto\-ethanol, ammonium
+persulphate, TEMED, Tris, EDTA, and MOPS were procured from
+various vendors including Gibco-BRL, Sigma, Calbiochem and others.
+Tryptone, yeast extract, peptone and agar powder for preparation
+of culture media were obtained from Hi Media (India). All
+restriction enzymes, Klenow polymerase, T4 DNA ligase, and
+polynucleotide kinase were purchased from New England Biolabs Inc.
+(USA). Lysozyme, DNase I, RNase, Proteinase K were purchased from
+Roche (Germany). \textit{Taq} DNA polymerase, DNA and protein
+molecular weight markers were purchased from Bangalore Genei
+(India). DNA and RNA purifying kits were purchased from QIAGEN and
+Promega. Phage packaging kit was from Stratagene (USA). The DNA
+random primer kit for labelling DNA, and radiolabelled nucleotides
+were from BRIT (India). Sephadex G-50 and G-25 were from Pharmacia
+Bio\-tech (Sweden). Custom made oligonucleotides were obtained
+either from Oswel (UK) or from in-house oligo synthesis facility.
+Nitrocellulose, Hybond{\scriptsize\texttrademark}-N\su{+} and
+PVDF{\scriptsize\texttrademark} membranes were from Amersham (UK)
+and Whatman filter paper from Whatman International ltd. (USA).
+X-ray films were obtained from Konica Corporation (Japan). All
+other chemicals were purchased from local manufacturers and were
+of analytical grade.
+
+\section{Software} All sequence analyses were performed over WWW
+using SeWeR~\citep{Basu2001} interface. In some special cases,
+custom-made Perl scripts were used. Other specific softwares are
+mentioned in this text as and when required.
+
+\section{Oligonucleotides}
+
+The oligonucleotides used in this study are listed in
+Table~\ref{chap2_oligos}.
+
+\begin{table}[tbp]
+\linespread{1}\normalsize
+\renewcommand{\arraystretch}{1.5}
+\begin{minipage}[c]{\textwidth}
+\renewcommand{\footnoterule}{}
+\caption{Oligonucleotides used in this study} \label{chap2_oligos}
+\begin{narrow}{-1in}{-1in}
+\centering
+\begin{small}
+\begin{tabular}{@{}lp{4.5in}@{}}\toprule
+\textbf{Name} & \textbf{Sequence\protect\footnote{From 5$'$ to
+3$'$ direction.}}\\\midrule ``\emph{rpoD} box'' (Probe1) &
+GCTTGGCGGATCCACCAGGTGGCGTAGGT\\
+``\emph{rpoD} box'' (Probe2) &
+GCTTGICIIATCCACCAIGTIGCITAIGT\protect\footnote{I stands for inosine.}\\
+RPODFP1 &
+AAGTTCTC(G/A/T/C)AC(C/G)TA(T/C)GC(A/T/G/C)ACC(G)T\-G\-G\-T\-G\-G\-A\-T\\
+RPODFP2 & AAGTTCTC(C/G)ACCTACGC(A/C)ACCTGGTGGAT \\
+RPODRP1 &
+GCCTT(C/G)GCTTC(G/A)AT(C/T)TG(G/C/A/T)CG(G/A)\-AT\-(A/C/G/T)\-C\-(G/T)(C/T)TC\\
+RPODRP2 &
+GCCTT(C/G)GC(C/T)TCGATCTG(A/G)CGGAT(A/C)CG(C/T)TC\\
+RPOSKOF &
+CCG\textbf{\underline{GAATTC}}CTACTACTGCCCGCACCAAGT\protect\footnote{\emph{Eco}RI
+site indicated in boldface and underlined.} \\
+RPOSKOR &
+CCC\textbf{\underline{AAGCTT}}AAAAGCATGCGCTTGACCTC\protect\footnote{\emph{Hin}dIII
+site indicated in boldface and underlined.}\\
+\bottomrule
+\end{tabular}
+\end{small}
+\end{narrow}
+\end{minipage}
+\linespread{1.1}\normalsize
+\renewcommand{\arraystretch}{1.0}
+\end{table}
+\section{Plasmids and cosmid}
+
+\begin{description}
+
+    \item [\textbf{pBluescriptII KS+}] (Stratagene) is a high-copy-number, ColE1-based
+    vec\-tor, which confers ampicillin resistance (Amp\su{r}) to the host cell.
+It also carries a
+        multiple cloning site region in \textit{lacZ$\alphaup$}
+        fragment enabling blue-white screening of the recombinant
+        clone.
+    \item[\textbf{pUC19}] (Pharmacia) is a high-copy-number, ColE1-based vector containing Amp\su{r} marker, and carries
+    \textit{lacZ}$\alphaup$ fragment enabling blue-white screening
+    of the recombinant clone.
+
+    \item [\textbf{pDB18R}] \citep{Fujita1994} is a high-copy-number plasmid
+        construct derived from pTZ18R (Pharmacia). It carries a
+        \unit[1.8]{kb} \textit{Kpn}I-\textit{Hind}III fragment containing
+        \bact{Pa} \textit{rpoS} promoter and
+        structural gene.
+
+    \item [\textbf{pASB3}] \citep{Tanaka1991} is plasmid pTZ18R carrying a
+        \unit[2.3]{kb} \textit{Pst}I DNA fragment containing \textit{rpoD} of
+        \bact{Pa}.
+
+    \item [\textbf{pLAFR3}] \citep{Staskawicz1987} is a broad-host-range cosmid with Tc\su{r} marker; allows blue-white screening because of the presence of
+\emph{lacZ}$\alphaup$ fragment.
+
+    \item [\textbf{pGEMD}] \citep{Igarashi1991} is derived from
+    pGEMEX1 (Promega) containing a \U{2.1}{kb} \emph{Hin}dIII
+    fragment spanning the full-length \emph{rpoD} of \bact{Ec}.
+
+    \item[\textbf{pGEMAX185}] \citep{Igarashi1991} is derived from
+    pGEMEX1 (Pro\-mega) containing \U{1.2}{kb} \emph{Xba}I
+    fragment spanning the full-length \emph{rpoA}
+    of \emph{E. coli}.
+
+    \item[\textbf{pGEMBC}] \citep{Igarashi1991} is derived from
+    pGEMEX1 (Promega) containing a \U{10.2}{kb} \emph{Hin}dIII
+    fragment spanning the full-length \emph{rpoB}, and \emph{rpoC}
+    gene of \emph{E. coli} with upstream \emph{rplL}.
+
+    \item[\textbf{PGEM-T}] (Promega) is a TA cloning vector of size \U{3003}{bp}, and is used to clone
+    PCR product with A-overhang. It contains Amp\su{r} marker and
+    \textit{lacZ}$\alphaup$ for screening of recombinant clones.
+
+    \item[\textbf{pCL1920}] \citep{Lerner1990} is a low-copy-number
+    vector with pSC101 replicon ($\sim$5 copies/cell). It
+    carries streptomycin/spectinomycin resistance mar\-ker (encoded
+    by \emph{aadA}), and also carries \emph{lacZ}$\alphaup$ that
+    allows blue-white screening of the recombinants.
+
+    \item[\textbf{p4A4}] is pBluescriptII KS$+$ containing a
+    \emph{Sal}I--\emph{Pst}I insert of \U{$\sim$2}{kb} containing C-terminal half of \emph{rpoD} homolog of \emph{P.
+    syringae} (Lz4W).
+
+    \item[\textbf{p4C12}] is pBluescriptII KS+ containing a
+    \U{$\sim$2.1}{kb} \emph{Pst}I fragment with the
+    full-length \emph{rpoS} of \emph{P. syringae} (Lz4W).
+
+    \item[\textbf{pRPOH5}] \citep{Aramaki1996} is plasmid pTZ18R containing a
+    \U{1.9}{kb} \emph{Sal}I--\emph{Pst}I fragment spanning the
+    full-length \emph{rpoH} of \bact{Pa}.
+
+    \item[\textbf{pGL10}] \citep{Bidle1999} is a broad-host-range
+    cloning vector with IncP replicon. It has a genotype,
+    \emph{tra}\su{$-$} \emph{mob}\su{$+$} and Km\su{r}.
+
+    \item[\textbf{pGLSIGS}] is pGL10 containing the insert of
+    p4C12.
+
+    \item[\textbf{pXRPOS}] is pGL10 containing
+    \emph{Pst}I--\emph{Bam}HI fragment from p4C12 and
+    \emph{Bam}HI--\emph{Hin}dIII fragment from pDB18R, ligated in
+    tandem, which results in a chimeric \emph{rpoS}.
+
+    \item[\textbf{pME3088}] \citep{Schnider2000} is a suicide vector with ColE1 replicon with genotype,
+    \emph{RK2-Mob} Tc\su{r}.
+
+    \item[\textbf{pMERPOS$'$}] is pME3088 containing a
+    \U{$\sim$750}{bp} internal fragment of \emph{rpoS} gene of
+    Lz4W.
+
+
+\end{description}
+
+
+
+
+\section{Culture media}
+
+All media were prepared using water purified through MilliQ water
+purification system (Millipore).
+
+\begin{longtable}{lll}\addlinespace
+\multicolumn{3}{@{}l}{\textbf{1. Culture media for \bact{Ps}
+(Lz4W)}}\\\addlinespace
+\multicolumn{3}{l}{\textbf{Antractic Bacteria Medium (ABM) broth:}}\\
+    &   Peptone &  \unit[5]{g} \\
+    & Yeast extract & \unit[2.5]{g} \\
+       & Water to   &    \unit[1000]{ml}\\
+       &     \multicolumn{2}{l}{pH adjusted to 7.0-7.2 with \unit[1]{M} NaOH.}\\
+       &     \multicolumn{2}{l}{Sterilized by autoclaving.}\\
+       \addlinespace
+
+{\bfseries ABM agar:} & ABM  &  \ml{100}\\
+              &  Agar & \U{1.5}{g}\\
+              \addlinespace\midrule\addlinespace
+
+\multicolumn{3}{@{}l}{\textbf{2. Culture media for
+\bact{Ec}}}\\\addlinespace
+{\bfseries LB medium:} &  Tryptone & \unit[10]{g} \\
+                        & Yeast extract & \unit[5]{g}\\
+                       & NaCl  &  \unit[10]{g}\\
+                & Water to & \unit[1000]{ml}\\
+    &     \multicolumn{2}{l}{pH adjusted to 7.0-7.2 with \unit[1]{M} NaOH.}\\
+       &     \multicolumn{2}{l}{Sterilized by
+       autoclaving.}\\\addlinespace
+
+    {\bfseries LB agar:} &   \multicolumn{2}{l}{LB medium with 1.5\%
+    (\nicefrac{w}{v}) agar.}\\\addlinespace
+
+
+    {\bfseries LB soft agar:} & \multicolumn{2}{l}{LB medium with 0.6\% (\nicefrac{w}{v}) agar.}\\\addlinespace
+
+    \textbf{SOB medium:} & Tryptone  & \U{20}{g} \\
+                        & Yeast extract & \U{5}{g}\\
+                        & NaCl          & \U{0.5}{g}\\
+                        & Water to      &\ml{1000} \\
+                        & \multicolumn{2}{p{3in}}{pH adjusted to 7. Sterilized by autoclaving, and just before use, \ml{5} of sterile \U{2}{M} MgCl\sub{2} was added.}\\\addlinespace
+
+    \textbf{SOC medium:} & SOB medium  & \ml{1000} \\
+                        & Glucose (\U{1}{M}) & \ml{20}
+                        \\\addlinespace
+
+    {\bfseries Z broth:} & \multicolumn{2}{l}{LB medium supplemented with 0.5\% (\nicefrac{v}{v}) CaCl\sub{2}
+    (\U{0.5}{M}).}\\\addlinespace
+
+    {\bfseries Z agar:} & \multicolumn{2}{l}{Z broth with 0.75\%
+    (\nicefrac{w}{v}) agar.}
+    \addtocounter{table}{-1}
+\end{longtable}
+
+\section{Buffers and solutions}
+    \label{buffers}
+    \begin{longtable}{llll}
+   \multicolumn{4}{@{}l}{\textbf{1. Plasmid isolation solution for alkaline
+    lysis}}\\\addlinespace
+  &\textbf{Solution 1:} &  Glucose & \mM{50}\\
+  &                     &  Tris-Cl (pH 8.0) & \mM{25}\\
+   &                & EDTA (pH 8.0) & \mM{10}\\\addlinespace
+   & \textbf{Solution 2:} & NaOH &   \U{0.2}{M} \\
+    &                   &  SDS & 1\% \\\addlinespace
+    &\textbf{Solution 3:} & Potassium acetate (\U{5}{M}) & \ml{60}\\
+    &                 & Glacial acetic acid & \ml{11.5}\\
+     &                & Water & \ml{28.5}\\
+     &                & \multicolumn{2}{p{3in}}{The pH of the solution is approximately
+                     4.8.}\\\addlinespace\midrule\addlinespace
+
+   \multicolumn{4}{@{}l}{\textbf{2. Electrophoretic buffer for nucleic acids}}\\\addlinespace
+    &  \textbf{TAE:} & Tris-acetate & \unit[40]{mM} \\
+    &               &  EDTA        & \unit[2]{mM}  \\
+    &               & \multicolumn{2}{p{3in}}{Prepared as 50 $\times$
+        concentrated stock solution and used as 0.5 $\times$
+        concentration.}\\\addlinespace
+
+    &  \textbf{TBE:} & Tris-borate  & \unit[90]{mM}\\
+    &               &  EDTA        &  \unit[2]{mM} \\
+    &               &\multicolumn{2}{p{3in}}{Prepared as 10 $\times$ stock solution and used as 0.5--1 $\times$
+concentration.}\\\addlinespace\midrule\addlinespace
+
+\multicolumn{4}{@{}l}{\bfseries 3. Hybridization solution}\\
+    & &Na$_{2}$HPO$_{4}$ & \unit[0.5]{M}\\
+    & & SDS              & 7\%\\\addlinespace\midrule\addlinespace
+
+ \multicolumn{4}{@{}l}{\bfseries 4. Buffers for transformation
+ }\\\addlinespace
+ & {\bfseries TB:}& PIPES (pH 6.7) & \mM{10} \\
+ & &  CaCl$_{2}\cdotp$2H$_{2}$O & \mM{15}\\
+ & &   KCl  &    \mM{250}\\
+ & &MnCl$_{2}$& \mM{55}\\\addlinespace
+
+   & \textbf{RF1:} & RbCl & \unit[100]{mM} \\
+   &               &MnCl$_{2}\cdotp$4H$_{2}$O &\unit[50]{mM}\\
+    &               & potassium acetate &    \unit[30]{mM}\\
+     &              & CaCl$_{2}\cdotp$\-2H$_{2}$O &   \unit[10]{mM}\\
+     &             & Glycerol  & 15\% \nicefrac{v}{v}\\
+   &              &\multicolumn{2}{p{3in}}{pH adjusted to 5.8 by glacial acetic acid, filter-sterilized and stored frozen at
+-20\,$^\circ$C.}\\\addlinespace
+
+
+  &\textbf{RF2:} &  MOPS & \unit[10]{mM}\\
+  &             & CaCl$_{2}\cdotp$2H$_{2}$O & \unit[75]{mM}\\
+   &            & RbCl         &  \unit[10]{mM} \\
+   &              & Glycerol   & 15\% \nicefrac{v}{v}\\
+   &              &\multicolumn{2}{p{3in}}{pH adjusted to 6.5 by adding \unit[1]{M} KOH, filter-sterilized and stored frozen at
+-20\,$^\circ$C.}\\\addlinespace\midrule\addlinespace
+
+ \multicolumn{4}{@{}l}{\textbf{5. Native polyacrylamide gel (10\%)}}\\
+ & & \multicolumn{2}{l}{For \ml{10}---}\\
+& & 30\% acrylamide mix & \ml{3.3}\\
+& & \U{1.5}{M} Tris (pH 8.8) &\ml{2.5}\\
+& & APS (10\%)               & \mul{100} \\
+& &TEMED                    &\mul{4} \\
+& & water                  &\ml{4.1}\\
+& &\multicolumn{2}{p{3in}}{The
+        gel was run in buffer containing \mM{25} Tris (pH 8.3), \mM{250}
+        glycine.}\\\addlinespace\midrule\addlinespace
+
+\multicolumn{4}{@{}l}{\bfseries 6. Reagents for
+SDS-PAGE}\\\addlinespace
+ \multicolumn{2}{l}{\textbf{Resolving gel (10\%):}}  & \multicolumn{2}{l}{For \ml{10}---}\\
+& & water                  &\ml{4}\\
+& & 30\% acrylamide mix & \ml{3.3}\\
+& & \U{1.5}{M} Tris (pH 8.8) &\ml{2.5}\\
+& &SDS (10\%)                      &\mul{100}\\
+& & APS (10\%)               & \mul{100} \\
+& &TEMED                    &\mul{4} \\\addlinespace
+
+ \multicolumn{2}{l}{\textbf{Stacking gel (5\%):}} & \multicolumn{2}{l}{For \ml{10}---}\\
+& & water                  &\ml{6.8}\\
+& & 30\% acrylamide mix & \ml{1.7}\\
+& & \U{1.0}{M} Tris (pH 6.8) &\ml{1.25}\\
+& &SDS (10\%)                      &\mul{100}\\
+& & APS (10\%)               & \mul{100} \\
+& &TEMED                    &\mul{10} \\\addlinespace
+
+ \multicolumn{2}{l}{\textbf{Running buffer:}} & Tris (pH 8.3) & \mM{25} \\
+ & &  Glycine & \mM{250} \\
+ & & SDS & 0.1\%\\\addlinespace
+
+ \multicolumn{2}{l}{\textbf{1 $\times$ Sample buffer:}} & Tris (pH 6.8)& \mM{50}\\
+      & & Dithiothreitol  &         \mM{100} \\
+& &      SDS       &       2\% \\
+ & & Bromophenol blue & 0.1\% \\
+    & & Glycerol  &10\%\\\addlinespace\midrule\addlinespace
+
+ \multicolumn{4}{@{}l}{\textbf{7. Buffers and solutions for immunoblotting}}\\\addlinespace
+
+ \multicolumn{4}{@{}l}{\bfseries Transfer buffer for semi-dry transfer of
+ proteins:}\\
+    & &  Glycine &  \unit[39]{mM}\\
+    & &   Tris   &   \unit[48]{mM}\\
+     & &  SDS    &  0.037\% \\
+     & & Methanol & 20\%\\\addlinespace
+
+
+    &\textbf{TBS:}   & Tris-HCl (pH 7.5) & \unit[10]{mM} \\
+    &               & NaCl              & \unit[150]{mM}\\
+    &               & \multicolumn{2}{l}{Made as 10 $\times$
+    stock.}\\\addlinespace
+
+    &\textbf{TBS-T:} &\multicolumn{2}{l}{TBS with 0.1\% Tween-20~\protect\footnote{Tween is a registered trademark of ICI Americas
+        Inc.}}\\\addlinespace
+
+\multicolumn{4}{@{}l}{\bfseries Alkaline phosphatase(AP) buffer:}\\
+& & Tris-Cl (pH 9.5)& \unit[100]{mM}\\
+ & &  NaCl           &  \unit[100]{mM}\\
+   & &      MgCl$_{2}$. &
+   \unit[5]{mM}\\\addlinespace\midrule\addlinespace
+
+ \multicolumn{4}{@{}l}{\textbf{8. Buffers for phage handling}}\\\addlinespace
+ & \textbf{SM buffer:} & For \ml{1000} buffer: & \\
+ & &NaCl & \U{5.5}{g} \\
+ & & MgSO$_{4}\cdot$7H$_{2}$O & \U{2.0}{g}\\
+ & & \U{1}{M} Tris-HCl (pH 7.5)& \ml{50}\\
+ & & Gelatin (2\% \nicefrac{w}{v}) & \ml{50}\\
+& &\multicolumn{2}{p{3in}}{Water to 1 liter. Strerilized by
+autoclaving.} \\\addlinespace
+
+ & \textbf{Citrate buffer:} & Citric acid (\U{0.1}{M}) & 4.7 volumes \\
+& & Sodium citrate (\U{0.1}{M}) & 15.4
+volumes\\\addlinespace\midrule\addlinespace
+
+   \multicolumn{4}{@{}l}{\textbf{9. Other buffers}}\\\addlinespace
+
+
+    &\textbf{TE:} & Tris-Cl (pH 8.0)& \unit[10]{mM} \\
+    &            &    EDTA         & \unit[1]{mM}\\\addlinespace
+
+    & \textbf{20 $\times$ SSC:} &  NaCl & \unit[173.5]{g}\\
+    &                          &  Sodium citrate & \unit[88.2]{g} \\
+     &                          & Water to       &  \unit[1000]{ml}\\
+     &                          & \multicolumn{2}{l}{pH adjusted to 7.0 with
+        NaOH.}\\\addlinespace
+\addtocounter{table}{-1}
+\end{longtable}
+
+
+
+\section{Bacterial strains}
+
+\textit{E. coli} and \textit{P. syringae} strains used in this
+study are listed in Table \ref{ecolistrains}.
+\begin{table}[tbp]
+\begin{minipage}[c]{\linewidth}
+\renewcommand{\footnoterule}{}
+\caption{Bacterial strains used in this study}
+\label{ecolistrains}
+\begin{narrow}{-1in}{-1in}
+\centering
+\begin{small}
+\linespread{1}\normalsize
+\renewcommand{\arraystretch}{1.6}
+\begin{tabularx}{6in}{@{}l>{\raggedright\arraybackslash}p{3.3in}>{\raggedright\arraybackslash}X@{}}\toprule
+ \multicolumn{1}{c}{\textbf{Strains}}  & \multicolumn{1}{c}{\textbf{Genotype/Description}} & \multicolumn{1}{c}{\textbf{Source/Reference}} \\
+ \midrule
+\multicolumn{3}{@{}l}{\bfseries\textit{Escherichia coli}
+strains\protect\footnote{All the strains are F$^{-}$ unless
+stated.}} \\ DH5$\alphaup$ &\textit{$\Delta$(argF-lac)}U169
+\textit{supE44 hsdR17 recA1 endA1 gyrA96 thi-1 relA1
+$\phi$}80d\textit{lacZ$\Delta$}M15
+&\multicolumn{1}{l}{\citet{Hanahan1983}}\\ DH10B\footnote{DH10B is
+a trademark of Invitrogen corporation.} & \textit{$\Delta$(mrr
+hsdRMS mcrBC) mcrA $\Delta$lacX74 deoR recA1 endA1 araD139
+$\phi$}80d\textit{lacZ $\Delta$}M15 \textit{$\Delta$(ara, leu)7697
+galU galK rpsL nupG} & \citet{Grant1990}
+\\
+MC4100         & \textit{$\Delta$(argF-lac)U169} \textit{rpsL150
+relA1 araD139 flb5301 deoC1 ptsF25}  & \citet{Casadaban1976}
+\\
+RH90            & MC4100 \textit{rpoS359}::Tn\textit{10} &
+\citet{Barth1995}\\ RH100\protect\footnote{The Tn\emph{10} allele
+in RH100 was originally designated \emph{zfi-3251}::Tn\emph{10},
+based on the calibration in an earlier edition of the \bact{Ec}
+K-12 linkage map.}     & MC4100
+$\Delta$(\emph{nlpD--rpoS})\emph{360 zgc-3251}::Tn\emph{10} &
+\citet{Hengge1993}\\ GJ2733          & MC4100 \textit{csiD::lac
+rpoS359}::Tn\textit{10} & \citet{Rajkumari2001} \hfill ~
+\\
+GJ2734          & MC4100 \textit{osmY::lac rpoS359}::Tn\textit{10}
+&  \citet{Rajkumari2001}
+\\
+GJ2782  & RH100 \emph{ara}\su{$+$} [$\lambda$
+\emph{katE}::\emph{lac}(Km)] & \citet{Rajkumari2002}\\
+ JM101           & {\itshape supE44 thi
+$\Delta$\textup{(}gpt-lac\textup{)}5 \textup{F$'$[}traD36
+proAB$^{+}$ lacI$^{q}$ lacZ$\Delta$\textup{M15]}} &
+\citet{Messing1979}\\
+MJMRH           & JM101 \textit{rpoS}::Tn\textit{10} & This
+    study.\\
+    S17-1           & \textit{pro recA1 RP4-2 integrated (Tc::Mu) (Km::}Tn\textit{7)}
+    (Sm\su{r}Tp\su{r})& \citet{Simon1983} \\
+    ZK918 & W3110 $\Delta$\textit{lacU169 tna-2} $\lambda$MAV103
+    \textit{rpoS::kan} & \citet{Bohannon1991} \\
+    UQ285 & P90A5 \emph{lacZ4} Lam\su{-} \emph{rpoD285}(ts)
+    \emph{argG75} & \citet{Isaksson1977}\\
+
+    \multicolumn{3}{@{}l}{\bfseries\textit{Pseudomonas syringae}
+    strains} \\
+    Lz4W & Natural isolate from Antarctica & \citet{Shivaji1989}
+    \\
+
+    MBLz4W & Lz4W \textit{rpoS::}pME3088 (Tet\su{r}) & This study.
+    \\
+ \bottomrule
+ \end{tabularx}
+ \end{small}
+\end{narrow}
+\end{minipage}
+
+\linespread{1.1}\normalsize \renewcommand{\arraystretch}{1.0}
+\end{table}
+
+
+
+
+\section{Antibiotics}
+
+\begin{table}[tbp]
+\caption{Antibiotics used for this study} \label{antibiotics}
+\centering
+\begin{small}
+\linespread{1.0}{\normalsize}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{@{}XXXX@{}}\toprule
+   & \textbf{\emph{E. coli} ($\muup$g/ml)}& \textbf{\emph{P. syringae} ($\muup$g/ml)} &
+   \textbf{Solvent} \\ \midrule \addlinespace
+    Ampicillin      & 100 & Naturally resistant & water \\
+ %   Chloramphenicol & 20  & -                   & ethanol \\
+ %   Gentamicin      & 15  &   15                & water  \\
+    Kanamycin       & 50  &   50                & water  \\
+  %  Rifampicin      & -   &  100                & methanol \\
+    Spectinomycin   & 50  &   -                 & water  \\
+    Tetracycline    & 20  &   20                & methanol \\
+    \addlinespace
+\bottomrule
+ \end{tabularx}
+\renewcommand{\arraystretch}{1.0}
+\linespread{1.1}
+\end{small}
+\end{table}
+
+Antibiotics used in this study and their concentrations are shown
+in Table \ref{antibiotics}.
+
+\section{Culturing of bacteria}
+\label{chap2:culture} Typically, the growth measurement was
+carried out by monitoring the turbidity of the culture, measured
+as optical density (OD) at \U{600}{nm}, in rich medium (LB for
+\bact{Ec}; ABM for \bact{Ps}). For growth comparison of different
+strains, pre-inoculum of bacteria from the same stages of growth
+was diluted 1000 times in \ml{100--150} medium, taken in \ml{500}
+conical flask. The flasks were continuously shaken at \U{200}{rpm}
+at the required temperature (22\dg{} or 4\dg{} for Lz4W). The
+samples were withdrawn at regular interval and OD$_{600}$ was
+measured either undiluted or by diluting the culture 5 times with
+water. In the latter case, absorbance was calculated by
+multiplying the OD obtained by the dilution factor. All the
+measured samples were measured either diluted or undiluted
+throughout the measurement. The undiluted culture OD$_{600}$
+maximum was 1.8 for Lz4W, which was equivalent to OD$_{600}$ 3 for
+diluted samples.
+
+\section{Preparation of crude cell extract}
+
+\label{crude} Cells were grown to required growth phase and
+harvested. The cell pellet was then resuspended  in phosphate
+buffer (\U{50}{mM} potassium phosphate, pH 7.0; \U{5}{mM} EDTA;
+10\% glycerol; \muM{25} phenylmethylsulfonyl fluoride) to an
+estimated OD of 10. Cells were then sonicated with Branson W-250
+sonicator on ice. Typically cells were given four rounds of five
+\U{2}{s} pulses with constant duty cycles and microtip settings of
+2--3. Debris was pelleted by centrifugation at 4\dg{} for
+\U{10}{minutes} at \g{12,000}. The supernatant was collected in a
+separate tube and stored at -70\dg.
+
+\section{Protein estimation}
+
+The concentration of the protein in the crude cell extract were
+determined by Bradford method \citep{Bradford1976} by BIO-RAD
+dye-reagent{\scriptsize\texttrademark} according to the supplier's
+protocol.
+
+\section{Enzyme assays}
+
+\subsection{$\betaup$-galactosidase assay}
+Assays for determination of $\betaup$-galactosidase enzyme
+activity in cultures were performed as described in
+\citet{Miller1992} and the activity values are calculated in
+\emph{Miller} units, as described therein.
+
+\subsection{Catalase assay}
+
+\subsubsection{Hydrogen peroxide bubbling test}
+
+Quick scoring for catalase phenotype was done by placing a drop of
+H$_{2}$O$_{2}$ (30\% \nicefrac{v}{v}) directly on the bacterial
+colony as mentioned in \citet{Mulvey1988}. The rate of bubble
+formation was taken as measure of catalase activity.
+
+\subsubsection{Spectrophotometric assay}
+\label{chap2:spec_catalase}
+
+Total catalase activity measurement was carried out as described
+in \citet{Visick1997}, which was based on \citet{Beers1951}.
+Briefly, \mul{25} of the crude extract was diluted to \ml{1.5}
+with \mM{50} potassium phosphate buffer, pH 7.0. Then \mul{2.5} of
+30\% H$_{2}$O$_{2}$ was added and the absorbance of the samples at
+\U{240}{nm} was measured every \U{15}{s} for \U{1}{min}. The
+specific activity of the catalase ($\muup$mol of H$_{2}$O$_{2}$
+decomposed/min/mg of total protein) was then calculated as
+follows:
+
+\begin{center}
+
+$\frac{\textrm{1,000}\ \times\ \Delta
+\textrm{A}_{\textrm\scriptsize 240}\ /\
+\textrm{min}}{\textrm{43.6}\ \times\ \textrm{mg\ of\ protein} /
+\textrm{ml\ of\ reaction\ mixture}}$
+
+\end{center}
+
+\section{Activity staining for catalase}
+\label{chap2:activity_staining}
+
+Negative staining of catalase activity on native gel was carried
+out as described previously \citep{Gregory1974}. Although the same
+group published an improved protocol later in \citet{Clare1984},
+we found the older protocol gives consistent results.
+
+In this method, the crude cell extract (Section \ref{crude}) was
+separated on 8--10\% nondenaturing polyacrylamide gel (see
+Section~\ref{buffers}) with no stacking gel. The glycerol in the
+extraction buffer (Section \ref{crude}) was enough to load the
+samples in the gel. A separate well was generally used to load a
+mixture of bromophenol blue in 20\% glycerol to follow the
+migration. The gel was run at constant current (\U{20}{mA}) for
+required amount of time, at 4\dg{}\@. After the run, the gel was
+soaked in diaminobenzidine (\U{0.5}{mg/ml}), horseradish
+peroxidase (\U{50}{$\muup$g/ml}) in \mM{50} potassium phosphate
+(pH 7.0) for \U{1} h at room temperature. The gel was then rinsed
+and soaked in \mM{20} H$_{2}$O$_{2}$ in phosphate buffer until
+staining was complete. The catalase bands appears as unstained
+white bands on dark background.
+
+\section{Genetic techniques}
+
+\subsection{Bacterial conjugation}
+\label{conjugation}
+
+Plasmids were mobilized to Lz4W by biparental mating between Lz4W
+and \bact{Ec} \mbox{S17-1}, transformed with the suitable plasmid.
+The donor (S17-1, transformed with suitable plasmid) and the
+recipient (Lz4W) strains were grown in \ml{3} of appropriate
+medium supplemented with required antibiotics to mid-logarithmic
+phase (OD$_{600}$ 0.6--0.9). The cells were pelleted by
+centrifugation at \U{6,000}{rpm} for \U{5}{min} at 4\dg{}, and
+were washed with \ml{1.5} of sterile ABM or LB broth. The cell
+pellets were resuspended in \mul{100} of ABM or LB, and the donor
+and the recipient were mixed in the ratio of 1:5
+(\nicefrac{v}{v}). From this mixture, \mul{50}  was spotted onto
+Hybond{\scriptsize{\texttrademark}} N\su{+} membrane (Amersham
+Life Sciences, Buckinghamshire, UK) placed on ABM agar. Following
+incubation for \U{24--72}{h} at 22\dg{}, the cells were scraped
+off from the membrane with sterile toothpicks, resuspended in ABM,
+and appropriate dilutions were plated on selection media. The
+plates were incubated at 22\dg{} for \U{48}{h} to obtain
+exconjugants.
+
+\subsection{P1 lysate preparation on RH90}
+\label{rh90_lysate}
+
+From an of overnight culture of the strain RH90 (see Table
+\ref{ecolistrains}) \ml{0.3} in Z broth was mixed with 10\su{7}
+plaque forming units (pfu) of a stock P1 lysate prepared on strain
+MG1655. Adsorption was allowed to occur at 37\dg{} for \U{20}{min}
+and the lysate was prepared in the following way.
+
+To \ml{0.3} of the infection mixture, \ml{10} of Z broth was added
+and incubated at 37\dg{} with slow shaking until growth followed
+by visible lysis of the culture occurred (\U{4--6}{h}). The lysate
+was treated with \ml{0.3} of chloroform, centrifuged  and the
+clear lysate was stored at 4\dg{} with chloroform.
+
+To measure the titer of the P1 phage in the lysate, titration was
+done using a P1-sensitive indicator strain such as MG1655.
+Aliquots of \mul{100} each of serial dilutions (typically
+10\su{5}--10\su{6}) were mixed with \mul{100} of the fresh culture
+grown in Z broth. After \U{15}{min} adsorption at 37\dg{} without
+shaking, each mixture was added into soft agar, overlayed on the Z
+agar plates, and incubated overnight at 37\dg{}.
+
+\subsection{P1 transduction of JM101}
+\label{P1_transduction}
+
+To \ml{2} of the fresh overnight culture of JM101, grown in Z
+broth, 10\su{8} pfu of P1 lysate was added and the mixture was
+incubated at 37\dg{} without shaking for \U{15}{min} to facilitate
+phage adsorption. The unadsorbed phage particles were removed by
+centrifugation at \g{4000} for \U{5}{min}. The pellet was
+resuspended in \ml{5} of LB containing \mM{20} sodium citrate to
+prevent further propagation of phage. The cell suspension was then
+incubated at 37\dg{} for \U{30}{min} without shaking for the
+phenotypic expression of the antibiotic resistance. The mixture
+was then centrifuged and the pellet was resuspended in \ml{0.3} of
+citrate buffer (see Section~\ref{buffers} for composition).
+\mul{100} aliquots were plated on tetracycline plates,
+supplemented with \mM{2.5} sodium citrate. The transduced JM101
+was named as MJMRH.
+
+\subsection{Generation of \emph{rpoS} disruption mutant}
+\label{chap2_disrupt}
+
+The \e{rpoS} disruption mutant was generated by homologous
+recombination. A \U{753}{bp} internal fragment of \emph{rpoS} gene
+was amplified in PCR using RPOSKOF, containing \emph{Eco}RI site,
+as forward primer, and RPOSKOR, containing \emph{Hin}dIII site, as
+reverse primer (Table~\ref{chap2_oligos}). The amplified product
+was digested with \emph{Eco}RI and \emph{Hin}dIII and ligated to
+suicide vector pME3088. The recombinant plasmid thus generated was
+named as pMERPOS$'$. \mbox{S17-1} cells were transformed with
+pMERPOS$'$\@. It was transferred to Lz4W in a biparental mating
+between Lz4W and S17-1 carrying pME\-RPOS$'$. Because it contains
+an internal fragment of \emph{rpoS}, a single recombination event
+would disrupt \emph{rpoS} reading frame. For the selection of
+exconjugants we took the advantage of Lz4W being naturally
+ampicillin resistant. The exconjugants were selected on ampicillin
+and tetracycline plates. For a schematic diagram of the whole
+procedure, see Figure~\ref{chap6_rpos_disruption}.
+
+\section{Molecular techniques}
+
+\subsection{Agarose gel electrophoresis}
+
+Routine checking of the DNA samples were carried out using
+0.8--1\% small (\U{5}{cm} long) agarose gel, cast in either 0.5
+$\times$ TAE or TBE with  ethidium bromide. Ethidium bromide was
+added at final concentration of \U{0.5}{$\muup$g/ml} either
+directly into molten agarose or in the tank buffer after the
+electrophoresis. DNA samples were loaded in DNA loading dye
+containing 30\% glycerol and 0.25\% bromophenol blue. The
+electrophoresis was carried out in 0.5 $\times$ TAE or TBE. For
+separation of genomic DNA digest longer gel (\U{15--20}{cm} long)
+were used. For genomic DNA the electrophoresis was carried out at
+constant voltage of \U{1--2}{V/cm} for \U{12--16}{h}.
+
+
+\subsection{Genomic DNA purification}
+
+Genomic DNA from bacterial cultures were purified by a modified
+protocol originally presented in \citet{Towner1991}.
+\unit[100]{ml} overnight grown bacterial culture was spun down and
+washed with \unit[40]{ml} of TE and resuspended in \unit[3.2]{ml}
+of lysis buffer containing \unit[50]{mM} Tris-Cl (pH 8.0) and
+\unit[0.7]{M} sucrose. Then the following solutions were added to
+the resuspended culture--- \unit[0.6]{ml} lysozyme
+(\unit[20]{mg/ml}), \unit[0.6]{ml} of \unit[0.5]{M} EDTA (pH 8.0),
+\unit[0.5]{ml} of 10\% SDS and \unit[5]{$\muup$l} RNase
+(\unit[100]{mg/ml}). The whole mixture was incubated for
+\unit[10]{min} at room temperature. Then, \unit[250]{$\muup$l} of
+Proteinase K (\unit[10]{mg/ml}) was added to the mixture, and
+incubated at 50\,$^\circ$C for \unit[30]{min}. The mixture was
+then extracted twice with phenol:choloroform (1:1 ratio) and the
+DNA precipitated by adding 1/10\su{th} volume of \unit[3]{M}
+sodium acetate and 2.5 volume of ethanol. The DNA was spooled by a
+glass rod and dipped several times in 70\% ethanol before
+dissolving in sterile water.
+
+The purity of the extracted DNA was then checked by standard
+spectophotometric method by measuring OD\sub{260} and OD\sub{280}
+of the solution. The quantity was also measured by running an
+aliquot in agarose gel and comparing with the known standard.
+
+The whole process was scaled down for extraction of DNA from
+\ml{3} culture.
+
+\subsection{Plasmid DNA purification}
+
+Depending on the amount or the quality of plasmid DNA, various
+methods were used. Small-scale (miniprep, from \ml{3} culture)
+preparations were routinely done using alkaline lysis method
+described below. For higher quality of plasmid DNA, commercial
+kits were used. Plasmid DNA from large cultures were prepared
+first by alkaline lysis followed by CsCl density gradient
+centrifugation.
+
+\subsubsection{Alkaline lysis}
+
+Small-scale preparation of plasmid DNA was made by the alkaline
+lysis method \citep{Birnboin1979} as described in
+\citet{Sambrook1989} with some modifications. The first solution
+for bacterial resuspension used, was TE (containing
+\U{100}{$\muup$g/ml} RNase) instead of the usual (\mM{50} glucose;
+\mM{25} Tris-Cl and \mM{10} EDTA).
+
+\ml{3} bacterial culture bearing the plasmid was centrifuged.
+Bacterial pellet obtained was resuspended in \mul{100} of TE
+(containing \U{100}{$\muup$g/ml} RNase). \mul{200} of Solution 2
+(\U{0.2}{N} NaOH, 1\% SDS) was added and the contents of the tube
+were mixed by inverting the tube several times. This was followed
+by the addition of \mul{150} of ice-cold Solution 3 (Made by
+adding glacial acetic acid to \U{5}{M} potassium acetate till pH
+becomes 4.8. For \ml{100} of solution---\ml{60} of \U{5}{M}
+potassium acetate, \ml{11.5} of glacial acetic acid and \ml{28.5}
+of water.) and gentle mixing. The tube was incubated on ice for 5
+min and centrifuged at \U{12,000}{\emph{g}} for \U{10}{min} at
+4\dg. The supernatant was extracted with an equal volume of
+phenol:chloroform and the DNA was precipitated with two volumes of
+absolute ethanol followed by 70\% ethanol rinse. The plasmid DNA
+was then checked on a 0.8\% agarose gel and stored at -20\dg.
+
+This DNA was suitable for routine procedures such as restriction
+digestion, preparation of radiolabelled probe and manual
+sequencing.
+
+\subsubsection{Large-scale isolation of plasmid}
+
+Large-scale preparation (from \ml{500} culture) of plasmid DNA was
+carried out by CsCl density gradient centrifugation as described
+in \citet{Sambrook1989} with some modifications. The major
+difference was at the centrifugation step as described below.
+
+Bacterial culture (\ml{500}) was harvested and resuspended in
+\ml{8} of Solution 1 (\mM{50} glucose; \mM{25} Tris, pH 8.0 and
+\mM{10} EDTA). To the suspension \mul{800} of lysozyme
+(\U{10}{mg/ml}) was added. Then, \ml{16} of Solution 2 (\U{0.2}{N}
+NaOH and 1\% SDS) was added to the suspension and mixed
+thoroughly. The content of the tube was mixed gently by inverting
+the tube. \ml{12} of Solution 3 (see Section \ref{buffers}) then
+added to the tube and centrifuged at \U{12,000}{\emph g} for
+\U{15}{min}. Supernatant was collected and the plasmid DNA was
+precipitated by adding 0.6 volume of isopropanol. The DNA pellet
+was rinsed with 70\% (\F{v}{v}) ethanol and air-dried.
+
+For CsCl density gradient centrifugation the DNA was resuspended
+in exactly \ml{4} of TE. To this solution, exactly \U{4.5}{g}
+solid CsCl (Serva) was added followed by \ml{0.5} of ethidium
+bromide (\U{10}{mg/ml}). The content of the tube was mixed and
+centrifuged at \U{12,000}{\textit{g}} for \U{15}{min} at room
+temperature. The clear solution from the top of the tube was
+loaded in Beckman Quick-seal tubes, sealed and centrifuged at
+\U{72,000}{rpm} for \U{5.5}{h} in a VTI80 rotor in Beckman L8-80
+ultra-centrifuge.
+
+After centrifugation, the supercoiled plasmid band was collected
+by piercing the tube with hypodermic syringe. Ethidium bromide was
+removed from the DNA by extracting several times with 1-butanol,
+and the DNA solution was dialized against two liters of TE for
+\U{24}{h}. After dialysis the DNA was precipitated with standard
+ethanol precipitation method.
+
+The DNA isolated by procedure gave the best possible quality
+plasmid DNA.
+
+
+\subsubsection{Purification by commercial kits}
+
+Plasmids were prepared from \ml{3} and \ml{100} cultures by
+Wizard{\scriptsize\texttrademark} \textit{Mini} and
+\textit{Midi\-prep} systems from Promega Corporation, USA,
+according to manufacturer's protocol. DNA prepared through these
+commercial kits were mainly used for automated DNA sequencing.
+
+\subsection{Restriction digestion}
+
+All the restriction digestion were performed according to the
+protocol supplied by the manufacturer, typically, in a reaction
+volume of \mul{20--50}.
+
+\subsection{Dephosphorylation of vector}
+\label{dephos} When cut with single enzyme or when blunt ended,
+the vector was dephosphorylated  using shrimp alkaline phosphatase
+(SAP) before ligation. Digested vector DNA ($\sim$\U{50}{ng}) was
+dissolved in \mul{7} water and to this \mul{1} dephosphorylation
+buffer (10 $\times$, supplied) and \mul{1} SAP (1 unit) was added.
+The mixture was incubated for \U{10}{min} at 37\dg{} for
+staggered-ended vector, and \U{60}{min} at 37\dg{} for blunt-ended
+vector. The SAP was inactivated for \U{15}{min} at 65\dg{}. The
+dephosphorylated vector was used directly for ligation.
+
+\subsection{Ligation}
+
+Typically, \U{50--100}{ng} of DNA was used in each ligation
+reaction in \mul{10--20} reaction volume with 0.05 Weiss units of
+T4 DNA ligase. The vector to insert ratio was maintained at 1:1 or
+1:3. The reaction was carried out routinely at 16\dg{} for
+\U{12--16}{h}.
+
+\subsection{Extraction of DNA from agarose gel}
+\label{mat:gel-extract}
+
+DNA fragments were purified from agarose gel by GENE
+CLEAN{\scriptsize\texttrademark} (BIO 101) or
+QiaQuick{\scriptsize\texttrademark} (QIAGEN) gel extraction kit
+according to manufacturer's protocol.
+
+\subsection{Making of partial genomic library}
+
+Partial genomic library of Lz4W was made in plasmids to clone
+various genes of interest. In this method, genomic DNA was
+digested with several restriction enzymes and the digested DNA was
+analyzed by Southern hybridization (Section \ref{mat:southern})
+with a suitable probe to find out the size of the restriction
+fragment that hybridizes to the probe. The enzyme that produced
+clonable fragment (up to \U{6}{kb}) was chosen to make the
+library. If no enzyme gave the proper size band the DNA was
+digested with two enzymes to bring the size of the band down to
+clonable range. The size of the fragment was noted very carefully.
+
+Large quantity ($\sim$\mug{100}) of genomic DNA was then digested
+and separated in 0.8\% TAE agarose gel in sevaral lanes. A
+suitable molecular weight marker was loaded in one of the lanes.
+The gel was cast without ethidium bromide and was run in constant
+voltage (\U{2--3}{V/cm}) overnight. After the run, the molecular
+weight marker lane was cut off from the gel and stained separately
+by soaking in ethidium bromide containing tank buffer and the
+marker band positions were marked on a transparent polythene
+sheet. The sheet was then placed on top of the rest of the gel,
+and around \U{1}{cm} thick slices were cut off from the required
+region of the gel using the molecular weight as guide. DNA was
+then isolated from these slices as described in Section
+\ref{mat:gel-extract}. A small aliquot from each of these size
+fractionated DNA samples was run in agarose gel and hybridized
+with the same probe in Southern hybridization to check for the
+presence of the required DNA fragment.
+
+Approximately, \U{50}{ng} of DNA was then ligated with \U{50}{ng}
+of pBluescriptII KS+ vector, cut with suitable restriction enzyme
+(for vector cut with single enzyme, it was dephosphorylated as
+described in Section \ref{dephos}). Around \mul{1--2} of the
+ligation mix was electroporated into \bact{Ec} DH10B cells and
+plated on LB plates with ampicillin. The positive clone was then
+detected using colony blot, described in Section
+\ref{colony-blot}.
+
+\subsection{Cosmid genomic library}
+\label{chap2:cosmid_library}
+
+A cosmid genomic library from Lz4W was made in cosmid
+pLAFR3~\citep{Staskawicz1987}. The overall protocol followed was
+as described in \citet{Asubel1991}. The enzyme \emph{Pst}I was
+chosen for making the library for the random distribution of its
+recognition sites in Lz4W genome. The cosmid pLAFR3 was the cosmid
+of choice because of the presence of a unique \emph{Pst}I site in
+its MCS and its broad host-range replicon. The various steps of
+making the cosmid library is described below.
+
+\subsubsection{Standardization of partial digestion}
+
+The partial digestion of the genomic DNA was standardized by
+incubating a fixed amount of genomic DNA with various units of
+\emph{Pst}I (2--0.007 units). Briefly, \mug{20} of genomic DNA in
+\mul{22} volume was mixed with \mul{22} of 10$\times$ restriction
+enzyme buffer and \mul{176} of water. From the mixture, \mul{20}
+aliquot each, was distributed in 11 tubes. \emph{Pst}I (8 units)
+was added in the first tube and the content was mixed by
+pipetting. From the content, \mul{20} was transferred to the
+second tube and the serial dilution was carried out to tenth tube,
+with each time \mul{20} content was transferred to the next. The
+first tube was discarded and the eleventh tube was kept aside as
+negative control (minus enzyme). All the ten tubes were incubated
+at 37\dg{} for one hour. The samples were run in 0.3\% agarose gel
+with a 1\% agarose base, with a very low constant voltage (3 V/cm)
+for 6 h. The concentration of the enzyme that produced the maximum
+product at at around \U{20}{kbp} region was chosen for the next
+step.
+
+\subsubsection{Large-scale partial digestion of DNA}
+
+For large-scale partial digestion about \mug{200} of genomic DNA
+was taken in \mul{400} of 1$\times$ restriction enzyme buffer.
+Digestion was carried out with 30 units of \emph{Pst}I at 37\dg{}
+for 1 h. An aliquot of the sample was checked for digestion by
+running in 0.3\% agarose gel. The same reaction was performed in
+batches of four.
+
+\subsubsection{Size fractionation of restriction fragments}
+
+Four \ml{12} continuous gradient of NaCl (5--25\%) were prepared
+in Beckman SW41 tubes using a commercial gradient maker. \mug{200}
+of partially digested DNA was loaded onto each gradient and
+centrifuged at \U{37,000}{rpm} for 4.5 h at 4\dg{} in Beckman SW41
+rotor. Fifty fractions, each of \mul{250}, were collected from
+each tube. The fractions were analyzed on 0.3\% agarose gel. The
+fractions of size \U{20--30}{kb} were pulled together and
+precipitated with ethanol.
+
+\subsubsection{Preparation of cosmid DNA and ligation}
+
+About \mug{30} of cosmid DNA (pLAFR3) was digested with
+\U{40}{units} of \emph{Pst}I in a reaction volume of \mul{150}.
+The digestion was carried out at 37\dg{}, overnight. The
+completion of the digestion was checked by analyzing an aliquot in
+0.8\% agarose gel.
+
+The linearized cosmid was dephosphorylated by adding \mul{2}
+(\U{10}{units/$\muup$l}) of calf intestinal phosphatase (CIP)
+directly into the digestion tube and incubating the DNA at 37\dg{}
+for \U{30}{min}. After the reaction, the digested and
+dephosphorylated cosmid was purified by phenol:choloform
+extraction and ethanol precipitation.
+
+For ligation, \mug{9} of insert and \mug{3} of vector were
+precipitated together by ethanol, and resuspended in \mul{10.5} of
+1$\times$ ligation buffer. The ligation was carried out at
+15\dg{}, overnight in \mul{15} reaction volume, in presence of 4
+units of T4 DNA ligase. The efficiency of ligation was checked by
+analyzing an aliquot on 0.5\% agarose gel.
+
+\subsubsection{Packaging}
+
+Packaging of ligated cosmid and inserts were carried out reaction
+was done using Gigapack II (Stratagene) packaging extract as
+specified by supplier.
+
+\subsubsection{Titering the library}
+
+Culture (\ml{50}) of \bact{Ec} DH10B cells were grown in LB
+supplemented with \mul{500} of \U{1}{M} MgSO$_{4}$ and \mul{500}
+of 20\% maltose. The cells were harvested and resuspended in
+\ml{12.5} of \mM{10} MgSO$_{4}$ and stored at 4\dg{} until further
+use. Just before use the cells were diluted to OD$_{600}$ of 0.5
+in \mM{10} MgSO\sub{4}. Three dilutions of the packaged DNA (1:10,
+1:30, 1:50) were prepared with SM buffer (see
+Section~\ref{buffers} for composition). \mul{25} of each dilution
+was mixed with \mul{25} of diluted DH10B cells and incubated at
+room temperature for 30 min. About \mul{200} of LB broth was added
+to each sample and incubated at 37\dg{} for 1 h. After the
+incubation the cells were harvested by centrifugation for 1 min,
+and resuspended in \mul{800} of fresh LB\@. Aliquot of \mul{200}
+each, of the resuspended cells was plated on four plates. The
+dilution of 1:30 was found to be suitable for amplification.
+
+\subsubsection{Amplification and storage of the library}
+
+The packaged phage particles (\mul{20}) were diluted to \mul{600}
+in SM buffer and incubated with \mul{600} of \bact{Ec} DH10B cells
+(OD\sub{600} $\sim$0.5) and incubated at room temperature for 30
+min. Four volumes of LB (\ml{4.8}) was added to the cells and
+incubated \U{1}{h} at 37\dg{} with shaking. The cell suspension
+was distributed in four microfuge tubes and cells were pelleted
+down by quick spin and resuspended into \ml{1} of LB for each
+tubes. The cells were spread on twenty \U{153}{mm} LB agar plates
+supplemented with tetracycline, X-gal and IPTG.
+
+White colonies were picked up from each plates and individual
+clones were inoculated into \mul{100--150} of LB containing
+tetracycline in 96-well microtiter plates. The plates were
+incubated overnight at 37\dg{}. Equal volume of 40\% glycerol was
+added to each well and the plates were stored at $-$70\dg{}.
+Around 2,200 individual clones were stored frozen by this method.
+
+\subsubsection{Screening of the library}
+
+A custom-made inoculation devise, with 96 projections was used to
+make replica of the 96-well microtiter plates on
+Hybond\texttrademark N\su{$+$} nylon membrane. Each membrane were
+treated and probed as discussed in Section~\ref{colony-blot}.
+
+
+\subsection{Transformation}
+
+Depending on the transformation efficiency required, various
+transformation protocols were used for \textit{E. coli}.
+\textit{P. syringae} cells were transformed only by
+electroporation.
+
+\subsubsection{Calcium chloride method}
+
+For routine plasmid transformations, where efficiency of
+transformation were not important, the ``classical''
+\citet{Mandel1970} calcium-chloride method were used. The
+following protocol was a modification of the protocol described in
+\citet{Brown1991}.
+
+An overnight grown culture of the \bact{Ec} was diluted 100 times
+in fresh LB medium (\unit[100]{$\muup$l} cells inoculated in
+\unit[10]{ml}) and subcultered till OD\sub{600} reached 0.4--0.5.
+The culture was chilled on ice for \unit[15]{min}. All the steps
+thereafter were carried out at 4\,$^\circ$C. The cells were
+harvested and resuspended in \nicefrac{1}{2} volume of the
+original culture of sterile ice-cold \unit[100]{mM} CaCl\sub{2}.
+The cells were again harvested and resuspended in \nicefrac{1}{10}
+volume of ice-cold \unit[100]{mM} CaCl\sub{2}\@. This suspension
+was incubated on ice for at least \unit[1]{h}\@. To
+\unit[100]{$\muup$l} of this suspension, DNA (\unit[10--100]{ng}
+of DNA in less than \unit[10]{$\muup$l} volume) was added. The
+mixture was incubated on ice for another \unit[30]{min} and then
+transferred to a 42\,$^\circ$C water bath for exactly
+\unit[90]{s}. Immediately, \unit[0.9]{ml} of LB medium was added
+to the tube and the tube was incubated at 37\,$^\circ$C for
+\unit[30--45]{min} for phenotypic expression of the antibiotic
+marker before plating them on selective media at various
+dilutions.
+
+\subsubsection{Rubidium chloride method} \label{rubidium}
+
+Most of the routine cloning experiments were carried out with
+competent cells made according to the method described by
+\citet{Hanahan1985} with a few modifications. In this protocol a
+single colony of \bact{Ec} cells was inoculated into \ml{3} of LB
+medium and incubated at 37\dg{} overnight. Aliquot of \mul{500} of
+this overnight culture was inoculated into \ml{50} of SOB medium
+and incubated at 37\dg{} at \U{200}{rpm} till the OD\sub{600}
+reached $\sim$0.5. The culture was then chilled on ice for
+\U{15}{min} and the cells were harvested by centrifugation at
+\U{4000}{rpm} for \U{15}{min} at 4\dg{}. The supernatant was
+completely drained and the pellet was gently resuspended in
+\ml{20} (0.4 volume) of ice-cold RF1 buffer (see Section
+\ref{buffers}) and incubated on ice for \U{20}{min}. The cells
+were again harvested and resuspended in 2 ml (0.04 volume) of the
+ice-cold RF2 buffer (Section \ref{buffers}) and incubated on ice
+for \U{15}{min}. The cells were then distributed into prechilled
+microfuge tubes in \mul{40} aliquots; flash frozen in liquid
+nitrogen and stored at \mbox{$-$70\dg}\@. Whenever required, one
+aliquot of cells was thawed on ice and mixed with DNA
+(\U{50--100}{ng}) and incubated for \U{30}{min} on ice. After
+incubation the tube was transferred to 42\dg{} water bath for
+\U{90}{s} and \ml{1} of LB or SOB or SOC added to the tube and
+incubated at 37\dg{} for \U{30--60}{min} and plated on selection
+plate.
+
+The competent cells prepared by this method generally yielded a
+transformation efficiency of 5 $\times$ 10\su{6} to 1 $\times$
+10\su{7} colonies/$\muup$g of pUC19 DNA, and were stable up to
+three months at \mbox{$-$70\dg{}}.
+
+\subsubsection{Ultracompetent cells}
+
+Ultracompetent cells were used for cloning experiments requiring
+high efficiency transformation. The cells were prepared according
+to the method described in \citet{Inoue1990}. A single colony of
+\bact{Ec} recipient cell was inoculated into \ml{3} of LB and
+incubated at 37\dg{} overnight. Aliquot of \ml{2.5} of this
+overnight culture was inoculated into \ml{250} of SOB medium and
+incubated at 18\dg{} at \U{200}{rpm}, till the OD\sub{600} reached
+0.6--0.7. The culture was chilled on ice and the cells were
+harvested by centrifugation at \U{4000}{rpm} for \U{15}{min} at
+4\dg{}\@. The cells were then resuspended in \ml{80} of ice-cold
+transformation buffer (TB, see Section \ref{buffers}) and
+incubated on ice for \U{10}{min}. The cells were harvested and
+resuspended in \ml{20} of TB containing 7\% DMSO. The cells were
+then distributed in \mul{100} aliquots; flash frozen in liquid
+nitrogen and stored at -70\dg{}. The transformation were done by
+heat-shock as in case of rubidium chloride method discussed in
+Section \ref{rubidium}.
+
+Ultracompetent cells prepared by this method yielded a
+transformation efficiency of 1 $\times$ 10\su{8} colonies/$\muup$g
+of pUC19 DNA and were stable for six months at -70\dg.
+
+\subsubsection{Electroporation}
+
+For making plasmid genomic library  or when very high efficiency
+of transformation was required the \textit{E. coli} cells were
+transformed by electroporation.
+
+The recipient cells were made \textit{electrocompetent} by the
+following method. Cells were grown in large volume (one liter)
+till the OD\sub{600} reaches 0.5--0.6. Culture was then cooled and
+washed three to five times with sterile ice-cold water (the total
+washing should be atleast the same volume of the original
+culture). The last washing was carried out in sterile ice-cold
+10\% glycerol. The cells were then resuspended in \mul{500} of
+sterile ice-cold 10\% glycerol, snap frozen in \mul{40} aliquots
+in liquid nitrogen, and stored in -70\dg. The electrocompetent
+cells thus prepared were transformed by electroporation using
+Bio-Rad Gene Pulser{\scriptsize\texttrademark} II, according to
+manufacturer's protocol.
+
+\subsection{Preparation of radio-labelled probes}
+
+Oligonucleotides were radio-labelled at the 5$'$-end with
+$\gammaup$-[\su{32}P]dATP using T4 polynucleotide kinase (PNK)\@.
+About 10 picomoles of primer was incubated at 37\dg{} for 30 min
+with \U{40}{$\muup$Ci} of $\gammaup$-[\su{32}P]dATP and 5 units of
+PNK in \mul{50} reaction volume.
+
+Longer double-stranded DNAs were radio-labelled by random-priming
+with $\alphaup$-[\su{32}P]dATP using Klenow enzyme and random
+hexamer oligonucleotides by a commercial random-priming kit (BARC,
+India), according to manufacturer's protocol. About \U{50}{ng} of
+DNA was labelled in each reaction.
+
+After the reaction, the probe was purified from the unincorporated
+nucleotides by Sephadex G25 or G50 spin-column chromatography.
+Sephadex G25 was used for oligonucletide probes and G50 was used
+for probes longer that 150 bp. Briefly, a \ml{1} disposable
+syringe was plugged with siliconized glass-wool (Supelco) and
+filled with Sephadex G25/50 slurry previously equilibrated with TE
+(pH 8.0). The column was packed by centrifugation at
+\U{2,500}{rpm} for \U{5}{min} in a Sorvall HB-4 swing-out rotor.
+Radio-labelled probe (\mul{100}) was then loaded on the column and
+the probe was purified by centrifugation, again at \U{3,000}{rpm}
+for \U{5}{min}.
+
+\subsection{Southern hybridization}
+\label{mat:southern}
+
+Southern hybridization was performed as described in
+\citet{Parry1995}. Briefly, DNA samples were electrophoresed in
+appropriate agarose gels. After electrophoresis, the DNA was
+transferred onto positively charged nylon membrane by capillary
+transfer overnight in \unit[0.4]{N} NaOH, a method originally
+described in \citet{Reed1985}. After transfer, the membrane was
+rinsed with 2 $\times$ SSC air-dried and stored at room
+temperature until further use.
+
+Hybridization was carried out in buffer described in
+Section~\ref{buffers} \citep{Church1984} at 65\,$^\circ$C,
+overnight for double-stranded probes and 55\dg{} overnight for
+oligonucleotide probes in sealed polythene bag. After the
+hybridization, the membrane was washed to remove the unbound
+probe. In the case of oligonucleotide probe, the membrane was
+washed with 6 $\times$ SSC thrice at room temperature with each
+wash lasting for 20 min, and in the case of longer probes the
+membrane was washed with 0.5--0.1 $\times$ SSC with 0.1\% SDS at
+68\dg{} for appropriate times and then exposed to phosphorimager
+(Fuji) screen or X-ray film.
+
+\subsection{Colony blot}
+\label{colony-blot}
+
+Genomic library of Lz4W in plasmid or cosmid, and transformed
+cells were screened for positives using colony blotting. In the
+case of genomic library the colonies were either grown or spread
+on Hybond\texttrademark-N\su{$+$} membrane placed on agar surface.
+In some cases already grown colonies were lifted by placing the
+membrane on top of the colonies on agar surface. After colonies
+were transferred on the membrane, it was placed, colony side up,
+on a pad of Whatman 3M filter paper soaked in denaturing solution
+(\U{1.5}{M} NaCl; \U{0.5}{M} NaOH) for \U{7}{min}. The membrane
+was then placed on another pad of filter paper soaked in
+neutralizing solution (\U{1.5}{M} NaCl; \U{0.5}{M} Tris-HCl pH
+7.2; \U{0.001}{M} EDTA) for 3 min. The last step was repeated
+again by changing the filter paper. The membrane was then washed
+vigorously in 2 $\times$ SSC and wiped gently with a cotton ball
+soaked in 2 $\times$ SSC to remove cell debris. The membrane was
+then transferred on a dry filter paper and air-dried. The DNA was
+fixed on membrane using alkali fixation procedure~\citep{Reed1985}
+by placing it on the surface of a filter paper soaked in
+\U{0.4}{M} NaOH for 20 min. The membrane was then rinsed with 2
+$\times$ SSC for \U{1}{min}, air-dried and stored at room
+temperatures until further use. The hybridization was carried out
+using conditions described in Section~\ref{mat:southern}.
+
+
+
+\subsection{Polymerase Chain Reaction (PCR)}
+
+For PCR using genomic DNA as a template about \U{250}{ng} DNA was
+used as template and for plasmid DNA \U{10--20}{ng} DNA was used
+as template in \mul{50 or 100} reaction volume. Reactions were
+performed with \muM{200} of dNTPs, \U{1}{picomoles/$\muup$l} each
+of forward and reverse primers and \U{1.5}{units} of \emph{Taq}
+DNA polymerase.
+
+For genomic PCR, the cycle conditions were as follows: initial
+\U{3}{min} denaturation at 94\dg{}. Three cycles of denaturation
+at 94\dg{} for \U{1}{min}, annealing at 37\dg{} for \U{1}{min},
+and extension at 72\dg{} for \U{2}{min}. Followed by 25 cycles of
+denaturation at 94\dg{} for \U{1}{min}, annealing at 50\dg{} for
+\U{1}{min}, and extension at 72\dg{} for \U{2}{min}. The reaction
+was terminated with \U{5}{min} extension at 72\dg.
+
+For plasmid DNA template, the cycle conditions were as follows:
+initial \U{5}{min} denaturation at 95\dg. Then 30 cycles with
+denaturation at 95\dg{} for \U{1}{min}, annealing at 50--55\dg{}
+for \U{1}{min} and extension at 72\dg{} for \U{1--2}{min}. The
+reaction was terminated with extension at 72\dg{} for \U{5}{min}.
+
+The PCR reactions were performed in either Perkin Elmer or M J
+Research's DNA Engine{\scriptsize{\texttrademark}} thermal cycler.
+
+\subsection{DNA sequencing}
+
+The DNA sequencing reaction was carried out on double stranded
+plasmid template using dye terminator chemistry using Big Dye
+Terminator sequencing kit (Applied Biosystems, USA) and the
+sequences determined using either ABI Prism 3700 or ABI prism 377
+automated DNA sequencer (Applied Biosystems, USA).
+
+\subsection{SDS-PAGE}
+\label{mat:sds} Whole cell proteins were separated on 10--12\%
+SDS-PAGE according to the \emph{classical} protocol devised by
+\citet{Laemmli1970} as described in \citet{Sambrook1989}.
+
+For separating whole cell proteins, cells were harvested from
+various growth phases and resuspended at calculated OD of 20 in 1
+$\times$ sample buffer (see Section~\ref{buffers} for
+composition). This cell suspension was boiled for \U{5}{min} and
+debris was removed by centrifuging at \g{12,000} for \U{15}{min}.
+Clean supernatant in a volume of \mul{25--50} was loaded in each
+lane.
+
+For analysis of cell extract, measured volume of crude extracts
+containing equal amounts of protein were taken in \mul{20} of
+water. Five microliters of 5 $\times$ sample buffer was added to
+each tube. The samples were boiled for \U{5}{min} and equal amount
+loaded in each lane.
+
+Gels were run at constant current of \U{20}{mA} for stacking gel,
+and \U{40}{mA} for resolving gel. After the run, if the gel was
+for western blotting, it was processed as described in Section
+\ref{mat:immunoblot}; otherwise, the gel was stained in Coomassie
+Brilliant Blue (\U{0.25}{g} in 30\% methanol and 10\% acetic acid)
+for minimum \U{1}{h} and destained in 30\% methanol and 10\%
+acetic acid mixture.
+
+\subsection{Immunoblotting with anti-RpoS antibody}
+\label{mat:immunoblot} RpoS protein level was detected using a
+mouse anti-RpoS polyclonal serum generated against \emph{P.
+putida} RpoS~\citep[kind gift from M. Kivisaar]{Ojangu2000}.
+Polyclonal anti-sera generated against \bact{Ec} RpoS (kind gift
+of R. Hengge-Aronis) did not give consistent result. For
+comparative quantitation of RpoS, protein samples were prepared by
+either sonication in phosphate buffer, as described in
+Section~\ref{crude} or by direct cell lysis in SDS-PAGE sample
+buffer. The equalization of the protein amount in the samples were
+done by either measured protein concentration or by resuspending
+the cell pellet to an estimated final OD of 20 in 1$\times$
+SDS-PAGE sample buffer. Typically \mul{20--40} of samples were
+loaded in each lane.
+
+After separation on SDS-PAGE (see Section~\ref{mat:sds}), the
+samples were transferred on to Hybond{\tiny\texttrademark} PVDF
+(polyvinyledene difluride, Amersham) or nitrocellulose
+(Hybond{\tiny\texttrademark} C, Amersham) using BIO-RAD
+Trans-Blot{\tiny\texttrademark} semi-dry transfer apparatus, in
+transfer buffer, described in Section~\ref{buffers}. The transfer
+was carried out for \unit[1.5]{h} with current set at
+\unit[0.8]{mA/cm$^{2}$}. After transfer, the efficieny was checked
+by staining the blot in 0.5\% Ponceau S (Sigma) in 1\% acetic
+acid. The excess stain was removed by rinsing the blot several
+times with water and the positions of molecular weight marker
+proteins were marked on the blot. If required, the blot was then
+scanned using a flat-bed scanner for reference.
+
+Next, the blot was blocked in 5\% not-fat milk in TBS-T (see
+Section \ref{buffers}) for \unit[2--12]{h}. The blot was then
+washed three times with TBS-T and incubated with primary antibody
+(1:250 dilution, in TBS-T with 1\% BSA) for \unit[1.5--2]{h}.
+After incubation, the blot was washed thrice with TBS-T, each wash
+for\unit[15]{min}. The blot was then incubated in anti-mouse IgG
+secondary antibody (in TBS-T with 1\% BSA, with 1:10,000 dilution)
+for \unit[1]{h}. The blot was subsequently washed three times with
+TBS-T to get rid of excess antibody. After rinsing with water, the
+blot was incubated in \unit[10]{ml} of AP buffer (see Section
+\ref{buffers}) in presence of \unit[66]{$\muup$l} of NBT (5\%
+solution in DMF) and \unit[33]{$\muup$l} of BCIP (disodium salt;
+5\% aqueous solution) till the signal appeared.\ding{45}

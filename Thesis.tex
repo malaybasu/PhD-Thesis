@@ -1,0 +1,435 @@
+\documentclass[pdftex,a4paper,oneside,11pt]{book}
+%\usepackage[a4paper,top=1.2in,bottom=1.2in,hdivide={*,5in,1.5in},headsep=0.3in]{geometry}
+%\renewcommand{\textheight}{8in}
+\usepackage[a4paper,top=1.2in,bottom=1.2in,hdivide={*,4.75in,1.5in}]{geometry}
+\usepackage[T1]{fontenc}
+%\usepackage{textcomp}
+\usepackage{texshade}
+%\usepackage{latexsym}
+%\usepackage{mathpazo,minion,myriad}
+\usepackage{pifont,txfonts,minion,myriad,courier}
+\usepackage{lscape}
+\usepackage{afterpage}
+\usepackage{tocbibind}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{enumerate}
+\usepackage[draft]{fixme}
+\usepackage{makeidx}
+\usepackage{placeins}
+%\usepackage[activate=normal]{pdfcprot}
+\makeindex
+
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue \fi
+\ifpdf
+\usepackage{graphicx}
+\pdfcompresslevel=9
+\else
+\usepackage{graphicx}
+\fi
+
+\makeatletter
+\def\@seccntformat#1{\llap{\hbox to 2em{\hss\expandafter\upshape\csname
+       the#1\endcsname\hspace*{6pt}}}}%
+\makeatother
+
+\usepackage[titles]{tocloft}
+%\setlength{\cftsecnumwidth}{5em}
+%\setlength{\cftsubsecnumwidth}{3.75em}
+%\setlength{\cfttabnumwidth}{3em}
+
+%\setlength{\cftchapindent}{5em} \setlength{\cftsecindent}{6.5em}
+%\setlength{\cftsubsecindent}{4.5em}
+%\setlength{\cftsubsubsecindent}{8.75em}
+%\setlength{\cfttabindent}{5em}
+
+\renewcommand{\cftchapfont}{\small\sffamily\bfseries}
+\renewcommand{\cftsecfont}{\small\sffamily}
+\renewcommand{\cftsubsecfont}{\small\sffamily}
+\renewcommand{\cftsubsubsecfont}{\small\sffamily}
+\renewcommand{\cfttabfont}{\small\sffamily}
+\renewcommand{\cftfigfont}{\small\sffamily}
+
+\renewcommand{\cftchappagefont}{\small\sffamily\bfseries}
+\renewcommand{\cftsecpagefont}{\small\sffamily}
+\renewcommand{\cftsubsecpagefont}{\small\sffamily}
+\renewcommand{\cftsubsubsecpagefont}{\small\sffamily}
+\renewcommand{\cfttabpagefont}{\small\sffamily}
+\renewcommand{\cftfigpagefont}{\small\sffamily}
+
+%\renewcommand{\cftchapleader}{}
+%\renewcommand{\cftchapafterpnum}{\cftparfillskip}
+%
+%\renewcommand{\cftsecleader}{}
+%\renewcommand{\cftsecafterpnum}{\cftparfillskip}
+%
+%\renewcommand{\cftsubsecleader}{}
+%\renewcommand{\cftsubsecafterpnum}{\cftparfillskip}
+%
+%\renewcommand{\cftsubsubsecleader}{}
+%\renewcommand{\cftsubsubsecafterpnum}{\cftparfillskip}
+%
+%\renewcommand{\cfttableader}{}
+%\renewcommand{\cfttabafterpnum}{\cftparfillskip}
+
+
+\def\chaptername{C\ \ H\ \ A\ \ P\ \ T\ \ E\ \ R\ \ \ }
+
+\setlength{\parindent}{0.3in}
+%\setlength{\parskip}{1ex}
+%\setlength{\emergencystretch}{4em}
+
+\usepackage{caption2}
+\renewcommand{\captionfont}{\linespread{1.1}\footnotesize\sffamily}
+\renewcommand{\captionlabelfont}{\footnotesize\bfseries\MakeUppercase}
+\setlength{\belowcaptionskip}{6pt} \setlength{\textfloatsep}{15pt
+plus 3pt minus 2pt}
+\renewcommand{\captionlabeldelim}{ }
+%\setcaptionmargin{0.3in}
+%\setcaptionwidth{\addtolength{\textwidth}{-0.3in}}
+
+\setcounter{secnumdepth}{3} \setcounter{tocdepth}{4}
+
+
+\usepackage[normalem]{ulem}
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+\chaptertitlefont{\centering\sffamily\huge}
+\chapternumberfont{\centering\sffamily\mdseries\large} %\ulemheading{\uline}}
+
+
+%\usepackage{minitoc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\newcommand{\omni}{%
+    \fontfamily{pmy}\fontsize{9}{11}\bfseries\selectfont}
+
+\newcommand{\omnihead}{%
+    \fontfamily{pmn}\fontsize{9}{11}\itshape\selectfont}
+
+\fancypagestyle{plain}{%
+\fancyhf{} \fancyfoot[R]{{\tiny\Pisymbol{pzd}{110}}\
+\omni\thepage}
+%\fancyfoot[C]{\omni\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+}
+
+%\fancyfoot[R]{\sffamily\thepage}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{CHAPTER\ \thechapter}{}}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhead[LO,LE]{\omnihead \nouppercase \leftmark}
+\fancyhead[RO,RE]{\omnihead \nouppercase \itshape \rightmark}
+\rfoot{%
+{\tiny\Pisymbol{pzd}{110}}\ \omni\thepage}
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\headrulewidth}{0.5pt}
+%\renewcommand{\headrulewidth}{\iffloatpage{0pt}{0.5pt}}
+
+%For adobe style
+%\newcommand{\myline}{\setlength{\unitlength}{1in}%
+%\begin{picture}(0,0)
+%\thinlines
+%%\put(-2,-3){\makebox(0,0)[r]{Malay}}
+%%\put(-0.14,-0.09){\line(0,1){0.15}}
+%\put(0,-0.09){\line(0,1){0.15}}
+%%\put(2,0){\makebox(0,0)[l]{#1}}
+%\end{picture}}
+
+\newcommand{\myline}{\setlength{\unitlength}{1in}%
+\begin{picture}(0,0)
+\thinlines
+%\put(-2,-3){\makebox(0,0)[r]{Malay}}
+\put(-.5,-0.09){\line(0,1){0.15}}
+\put(-.5,-0.06){\line(1,0){5.75}}
+%\put(2,0){\makebox(0,0)[l]{#1}}
+\end{picture}}
+
+\newcommand{\myleftheader}[1]{\setlength{\unitlength}{1in}%
+\begin{picture}(0,0)
+\put(-0.5,-0.09){\line(0,1){0.15}}
+\put(-0.42,0.04){\makebox(0,0)[l]{#1}}
+\put(-.5,-0.06){\line(1,0){5.75}}
+\end{picture}}
+
+\newcommand{\myleftemptyheader}[1]{\setlength{\unitlength}{1in}%
+\begin{picture}(0,0)
+%\put(-0.5,-0.09){\line(0,1){0.15}}
+\put(-0.42,0.04){\makebox(0,0)[l]{#1}}
+%\put(-.5,-0.06){\line(1,0){5.75}}
+\end{picture}}
+
+%
+%\newcommand{\myleftheader}[1]{\setlength{\unitlength}{1in}%
+%\begin{picture}(0,0)
+%\put(0,-0.09){\line(0,1){0.15}}
+%\put(0.08,0.04){\makebox(0,0)[l]{#1}}
+%\end{picture}}
+%
+%\newcommand{\myrightheader}[1]{\setlength{\unitlength}{1in}%
+%\begin{picture}(0,0)
+%\put(0.07,0.04){\makebox(0,0)[r]{#1}}
+%\put(0.14,-0.09){\line(0,1){0.15}}
+%\end{picture}}
+
+\newcommand{\myrightheader}[1]{\setlength{\unitlength}{1in}%
+\begin{picture}(0,0)
+\put(-0.08,0.04){\makebox(0,0)[r]{#1}}
+\put(0,-0.09){\line(0,1){0.15}}
+\end{picture}}
+
+\newcommand{\myheadrule}{\setlength{\unitlength}{1in}%
+\begin{picture}(0,0)
+%\put(-2.5,-0.06){\line(1,0){5}}
+\put(0,-0.09){\line(0,1){0.1}}
+\put(0,0.12){\makebox(0,0)[c]{\omni\thepage}}
+\end{picture}}
+
+%\chead{\myheadrule}
+
+%\lhead{\leftmark}
+%\setlength{\headwidth}{5.25in}
+%\setlength{\textwidth}{5.5in}
+%\setlength{\marginparsep}{0.25in}
+%\setlength{\marginparwidth}{0pt}
+%\addtolength{\headwidth}{\marginparsep}
+%\addtolength{\headwidth}{\marginparwidth}
+\addtolength{\headwidth}{0.5in}
+%\addtolength{\marginparsep}{-0.25in}
+%\reversemarginpar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% My own definition
+\newcommand{\dg}{\,$^\circ$C}
+\newcommand{\su}[1]{$^{\textup{\scriptsize #1}}$}
+\newcommand{\smallsu}[1]{$^{\textup{\tiny #1}}$}
+\newcommand{\muM}[1]{\unit[#1]{$\muup$M}}
+\newcommand{\mM}[1]{\unit[#1]{mM}}
+\newcommand{\mug}[1]{\unit[#1]{$\muup$g}}
+\newcommand{\U}[2]{\unit[#1]{#2}}
+\newcommand{\F}[2]{\nicefrac{#1}{#2}}
+\newcommand{\mul}[1]{\unit[#1]{$\muup$l}}
+\newcommand{\ml}[1]{\unit[#1]{ml}}
+\newcommand{\g}[1]{\unit[#1]{\textit{g}}}
+\newcommand{\seq}[1]{{\small\texttt{#1}}}
+\newcommand{\sub}[1]{$_{\textup{\scriptsize #1}}$}
+\newcommand{\subsf}[1]{$_{\textsf{\tiny #1}}$}
+\newcommand{\lzsig}{\emph{rpoS}\sub{Lz4W}}
+\newcommand{\lzsiga}{\emph{rpoD}\sub{Lz4W}}
+\newcommand{\Lzsiga}{RpoD\sub{Lz4W}}
+\newcommand{\Lzsigs}{RpoS\sub{Lz4W}}
+\newcommand{\ecsig}{\emph{rpoS}\sub{Ec}}
+\newcommand{\pasig}{\emph{rpoS}\sub{Pa}}
+\newcommand{\ppsig}{\emph{rpoS}\sub{Pp}}
+\newcommand{\sigs}{$\sigmaup$\su{S}}
+\newcommand{\siga}{$\sigmaup$\su{70}}
+\newcommand{\s}{$\sigmaup$}
+\newcommand{\e}[1]{\emph{#1}}
+\renewcommand{\thefootnote}{\emph{\alph{footnote}}}
+
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.60}
+%\renewcommand{\arraystretch}{1.6}
+
+\hyphenation{Loe-wen Loe-w-en} \hyphenation{Es-pi-no-sa}
+
+% Wide figures
+\newenvironment{narrow}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}}%
+\item[]}{\end{list}}
+
+\newlength{\marginwidth}
+\setlength{\marginwidth}{\marginparwidth}
+\addtolength{\marginwidth}{\marginparsep}
+
+%Nice looking fraction and units
+\usepackage[loose]{units}
+\usepackage{nicefrac}
+
+% Nice species name
+\usepackage{biocon}
+\newbact{Pa}{genus=Pseudomonas,epithet=aeruginosa}
+\newbact{Ec}{genus=Escherichia,epithet=coli}
+\newbact{Ps}{genus=Pseudomonas,epithet=syringae}
+\newbact{Pp}{genus=Pseudomonas,epithet=putida}
+
+%Bibliography
+\usepackage{natbib}
+\setlength{\bibhang}{.25in}
+\setlength{\bibsep}{0pt}
+\newcommand{\bibfont}{\small}
+\bibpunct[; ]{(}{)}{;}{a}{}{, }
+
+\usepackage{booktabs}
+\renewcommand{\heavyrulewidth}{1.2pt}
+\renewcommand{\lightrulewidth}{0.5pt}
+
+%\usepackage[flushmargin]{footmisc}
+
+\usepackage{lettrine}
+\usepackage{url}
+\urlstyle{tiny}
+\usepackage{color}
+\definecolor{green}{rgb}{0,0.5,0}
+%\usepackage[colorlinks,hyperindex,backref,citecolor=blue]{hyperref}
+%\usepackage[colorlinks,hyperindex,backref,citecolor=green]{hyperref}
+%\def\pdfBorderAttrs{/Border [0 0 0] } % No border around Links
+% Some further Color tuning. Use xcolorsel for help with the colors
+%\definecolor{links}{rgb}{0,0,1} % BlueViolet
+%\def\LinkColor{links}
+%\definecolor{anchors}{rgb}{0,0,1} % IndianRed
+%\def\AnchorColor{anchors}
+
+\begin{document}
+%\fontsize{10.5}{12}\usefont{T1}{pmn}{m}{n}\selectfont
+\DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png}
+\thispagestyle{empty}
+\begin{figure}[h]
+\vfill
+\begin{narrow}{-1.5in}{-1.5in}
+\centering
+\includegraphics{figures/title}
+\end{narrow}
+\vfill \thispagestyle{empty}
+\end{figure}
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/dedication}
+\end{figure}
+\thispagestyle{empty}
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/certificate}
+\end{figure}
+\thispagestyle{empty}
+
+
+\frontmatter
+
+\lhead{\myline}
+\rhead{\myrightheader{\omnihead\itshape\nouppercase\leftmark}}
+
+%\addcontentsline{toc}{chapter}{List of tables}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\linespread{1.1}\normalsize
+\include{preamble}
+
+\linespread{1}\normalsize
+
+\tableofcontents  \listoffigures \listoftables
+\include{abb}
+\linespread{1.1}\normalsize
+\include{Abstract}
+%\chapter{Preamble}
+%UNMARK following lines to make float page empty
+\lhead{\iffloatpage{\myleftemptyheader{\omnihead\itshape\nouppercase\leftmark}}{\myleftheader{\omnihead\itshape\nouppercase\leftmark}}}
+\rhead{\iffloatpage{\omnihead\itshape\nouppercase\rightmark}{\myrightheader{\omnihead\itshape\nouppercase\rightmark}}}
+%\renewcommand{\chaptermark}[1]{\markboth{CHAPTER \thechapter}{}}
+
+
+\mainmatter
+%\lhead{\myleftheader{\omnihead\itshape\nouppercase\leftmark}}
+%\rhead{\myrightheader{\omnihead\itshape\nouppercase\rightmark}}
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/intro_sep}
+\end{figure}
+\thispagestyle{empty}
+
+\include{introduction}
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/chap2_sep}
+\end{figure}
+\thispagestyle{empty}
+
+\include{chapter2}
+%\pagebreak \thispagestyle{empty} Something here
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/chap3_sep}
+\end{figure}
+\thispagestyle{empty}
+
+\include{chapter3}
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/chap4_sep}
+\end{figure}
+\thispagestyle{empty}
+
+\include{chapter4}
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/chap5_sep}
+\end{figure}
+\thispagestyle{empty}
+
+
+\include{chapter5}
+
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/chap6_sep}
+\end{figure}
+\thispagestyle{empty}
+
+
+\include{chapter6}
+\FloatBarrier\pagebreak \thispagestyle{empty}
+\begin{figure}[h]
+\raggedleft
+\includegraphics{figures/chap7_sep}
+\end{figure}
+\thispagestyle{empty}
+
+\include{discussion}
+\backmatter
+\linespread{1}\normalsize
+
+\afterpage{\addcontentsline{toc}{chapter}{Bibliography}}
+\lhead{\myline} %\rhead{\myrightheader{\rightmark}}
+%\begin{small}
+%\bibliography{rpos,rpoh,rpod,pseudo_rpos,thesis}
+\bibliography{thesis}
+\bibliographystyle{myapalike}
+%\bibliographystyle{newbioinfo}
+%\end{small}
+%\printindex
+\linespread{1.1}\normalsize
+\include{colophon}
+
+
+\end{document}
